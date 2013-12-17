@@ -1,0 +1,54 @@
+/* Стили основного блока */
+.star{
+	font-size: 0;
+	white-space: nowrap;
+	display: inline-block;
+	width: 250px;
+	height: 50px;
+	overflow: hidden;
+	position: relative;
+	background: url('misc_58.png');
+	background-size: contain;
+}
+/* Определяем стилизацию звездочки */
+.star span {
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 20%;
+	z-index: 1;
+	background: url('rating_5559.png');
+	background-size: contain;
+}
+/* Скрытваем элементы radio */
+.star input {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	opacity: 0;
+	display: inline-block;
+	width: 20%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	z-index: 2;
+	position: relative;
+}
+/* Стилизация выбранных звезд */
+.star input:hover + span,
+.star input:checked + span {
+	opacity: 1;
+}
+.star span ~ span {
+	width: 40%;
+}
+.star span ~ span ~ span {
+	width: 60%;
+}
+.star  span ~ span ~ span ~ span {
+	width: 80%;
+}
+.star  span ~ span ~ span ~ span ~ span {
+	width: 100%;
+}
